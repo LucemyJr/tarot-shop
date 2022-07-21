@@ -166,6 +166,120 @@ body{
 
 }
 
+/* Fim Main Image */
+
+/* Main 2 */
+
+.section2{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.column1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Announcements */
+
+.announcement{
+    border: 2px solid #000;
+    background-color: #eee;
+    width: 31rem;
+    height: 15rem;
+    padding: .5rem;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.announcement::-webkit-scrollbar{
+    width: .4rem;
+    background-color: #9F9F9F;  
+    border-radius: 4px;           
+}
+.announcement::-webkit-scrollbar-thumb{
+    background-color: #000;
+    border-radius: 4px;
+}
+.annoucement-tittle{
+    color: #FF5C00;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+.annoucement-itens{
+    padding-top: .7rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 auto;
+    width: 29rem;
+    font-size: 1.4rem;
+    gap: 1rem;
+}
+
+/* Items */
+
+.items-tittle{
+    color: #FF5C00;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.search-items-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.search-items-and-icon{
+    display: flex;
+    justify-content: space-around;
+    background-color: #eee;
+    border-radius: 1.5rem;
+    border: 2px solid #000;
+    width: 20rem;
+    height: 3rem;
+}
+.search-items{
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+}
+.search-icon-section2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 1.8rem;
+    padding-right: 2rem;
+}
+.all-items{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    gap: 2rem;
+}
+.item-name-amount{
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+}
+.item-name-amount:hover{
+    background-color: rgb(238, 238, 238);
+}
+
+/* Reviews */
+
+.reviews{
+    border: 2px solid #000;
+    background-color: #eee;
+    width: 31rem;
+    height: 15rem;
+    padding: .5rem;
+    overflow: scroll;
+    overflow-x: hidden;
+}
 
 
 
