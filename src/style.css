@@ -183,14 +183,24 @@ body{
 .section2{
     display: flex;
     justify-content: space-between;
-    padding: 1rem 1rem 5rem;
+    padding: 3rem 2.5rem 5rem;
 }
 .column1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    justify-content: space-around;
+    padding-right: 3rem;
 }
+.column2{
+    width: 25rem;
+    padding-right: 3rem;
+}
+.column3{
+    width: 25rem;
+    margin-right: 5rem;
+}
+
 
 /* Announcements */
 
@@ -264,7 +274,7 @@ body{
     font-size: 1.8rem;
     padding-right: 2rem;
 }
-.all-items{
+.items-name{
     display: flex;
     flex-direction: column;
     width: 20rem;
@@ -327,6 +337,54 @@ body{
     font-size: 1.4rem;
 }
 
+/* Image Columns */
+
+.column-items{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.column-images{
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+.all-items{
+    color: #FF5C00;
+    font-size: 2rem;
+    font-weight: lighter;
+    height: 2.5rem;
+}
+.sort{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 1.4rem;
+    height: 2.5rem;
+    font-weight: lighter; 
+}
+.image-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.image-block img{
+    width: 100%;
+}
+.img-tittle-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+}
+.image-block h2{
+    font-size: 1.8rem;
+}
+.image-block h3{
+    font-size: 1.7rem;
+}
+
+
+
 
 
 /* Responsive */
@@ -376,6 +434,17 @@ body{
 
     /* Bottom Main */  
 
+    .column1{
+        height: 63rem;
+    }
+    .column2{
+        width: 18rem;
+        height: 63rem;
+    }
+    .column3{   
+        width: 18rem;
+        height: 63rem;
+    }
     .about{
         width: 45rem;
         height: 10rem;
@@ -401,5 +470,87 @@ body{
     }
     .girl-image{
         height: 10rem;
+    }
+
+    /* Announcements */
+
+    .announcement{
+        width: 26rem;
+        height: 13rem;
+    }
+    .annoucement-tittle{
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+    .annoucement-itens{
+        width: 23rem;
+        font-size: 1.3rem;
+    }
+
+    /* Items */
+
+    .items-tittle{
+        font-size: 1.5rem; 
+    }
+    .search-items-and-icon{
+        width: 19rem;
+        height: 2.7rem;
+    }
+    .search-items{
+        font-size: 1.2rem;
+        padding-left: 2.2rem;
+    }
+    .search-icon-section2{
+        font-size: 1.7rem;
+        padding-right: 2rem;
+    }
+    .items-name{
+        width: 19rem;
+        gap: 1.6rem;
+        padding-bottom: 1rem;
+    }
+
+    /* Reviews */
+
+    .reviews{
+        width: 26rem;
+        height: 13rem;
+    }
+    .reviews-tittle{
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+    .review-block{
+        width: 23rem;
+        font-size: 1.3rem;
+    }
+    .review-stars{
+        font-size: 1.3rem;
+    }
+
+    /* Image Columns */
+
+    .all-items{
+        font-size: 1.7rem;
+    }
+    .sort{
+        font-size: 1.2rem;
+    }
+    .image-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .img-tittle-price{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+    }
+    .image-block h2{
+        font-size: 1.1rem;
+    }
+    .image-block h3{
+        font-size: 1.1rem;
     }
 }
