@@ -7,6 +7,7 @@
     list-style: none;
     font-family: 'Merriweather', serif;
     outline: none;
+    box-sizing: border-box;
 }
 body{
     background-color: #fff;
@@ -18,13 +19,15 @@ body{
 ::-webkit-scrollbar-thumb{
     background-color: #a7a7a7;
 }
+
 /* Header */
 
 .header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 1.2rem 0 1.5rem 0;  
+    margin: 1.2rem 1rem;
+    gap: 1.5rem;
 }
 .logo{
     font-size: 3rem;
@@ -58,14 +61,25 @@ body{
     border-left: 1px solid rgb(0, 0, 0);
     background-color: #FF8B4A;
 }
-.nav-option{
-    color: #5a5a5a;
-    font-size: 3rem;
-}
-.nav-option:hover{
-    color: #a7a7a7;
+.menu-option-span{
+    display: none;
 }
 #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+.menu-option{
+    font-size: 2.7rem;
+}
+.menu-option i{
+    color: #5a5a5a;
+}
+.menu-option:hover{
+    color: #a7a7a7;
+}
+#menu{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -355,12 +369,16 @@ body{
     font-weight: lighter;
     height: 2.5rem;
 }
-.sort{
+.sort-block{
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+#sort{
     font-size: 1.4rem;
-    height: 2.5rem;
-    font-weight: lighter; 
+    width: 15rem;
+    font-weight: bold; 
+    border: none;
+    background: none;
 }
 .image-block {
     display: flex;
@@ -383,9 +401,9 @@ body{
     font-size: 1.7rem;
 }
 
-
-
-
+#btn-mobile{
+    display: none;
+}
 
 /* Responsive */
 
@@ -552,5 +570,250 @@ body{
     }
     .image-block h3{
         font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 1050px){
+
+    /*Menu Hamburguer*/
+    
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+        margin: 0;
+        padding: 1rem .2rem 1rem .2rem ;
+    }
+    #menu{
+        display: block;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        top: 70px;
+        right: 0px;
+        background: #fff;
+        height: 0px;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+        z-index: 1000 ; 
+    }
+    #nav.active #menu{
+        height: calc(100% - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+    }
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        align-items: center;
+        font-size: 1.3rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+    #hamburguer{
+        border-top: 0.2rem solid;
+        width: 1.6rem;
+        color: #FF5C00;
+    }
+    #hamburguer::after, #hamburguer::before{
+        content: " ";
+        display: block;
+        width: 1.6rem;
+        height: 0.2rem;
+        background: currentColor;
+        margin-top: 0.3125rem;
+        position: relative;
+        transition: 0.3s;
+    }
+    #nav.active #hamburguer{
+        border-top-color: transparent;
+    }
+    #nav.active #hamburguer::before{
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburguer::after{
+        transform: rotate(-135deg);
+        top: -0.5rem;
+    }
+
+    /*Fim Menu Hamburguer*/
+
+    .logo{
+        font-size: 1.2rem;
+    }
+    .search{
+        width: 8rem;
+        font-size: 0.9rem;
+        padding-left: .7rem;
+    }
+    .search-area{
+        border-radius: 25px;
+        border: 1px solid rgba(0, 0, 0, 0.37);
+    }
+    .search-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        width: 3rem;
+        border-radius: 25px;
+        border-left: 1px solid rgb(0, 0, 0, 0.37);
+    }
+    .menu-option{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    }
+    .menu-option-span{
+        display: block;
+        color: #5a5a5a;
+    }
+    .need-help{
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    /* Main Image */
+
+    .section1{
+        display: none;
+    }
+    .favorite-contact{
+        display: none;
+    }
+    .favorite{
+        display: none;
+    }
+    .favorite-heart{
+        display: none;
+    }
+    .contact{
+        display: none;
+    }
+    .contact-btn{
+        display: none;
+    }
+    .ashlyn{
+        display: none;
+    }
+    .local{
+        font-size: 1rem;
+    }
+    .sales{
+        font-size: 1rem;
+    }
+
+    /* Fim Main Image */
+
+    /* Main 2 */
+
+    .section2{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 3rem 2.5rem 5rem;
+        gap: 3rem;
+    }
+    .column1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 0px;
+    }
+    .column2{
+        width: 25rem;
+        padding-right: 0px;
+    }
+    .column3{
+        width: 25rem;
+        margin-right: 0px;
+    }
+    .image-block {
+        align-items: center;
+    }
+    .image-block img{
+        width: 70%;
+    }
+    .img-tittle-price{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto 0 auto;
+    }
+    .image-block h2{
+        font-size: 1.2rem;
+        padding-top: 1rem;
+    }
+    .image-block h3{
+        font-size: 1.1rem;
+        padding-top: .4rem;
+    }
+    .all-items{
+        display: none;
+    }
+
+    /* Announcements */
+
+    .announcement{
+        width: 19rem;
+    }
+    .annoucement-tittle{
+        font-size: 1.5rem;
+    }
+    .annoucement-itens{
+        width: 14rem;
+        font-size: 1.2rem;
+    }
+
+        /* Items */
+
+    .items-tittle{
+        font-size: 1.5rem;
+    }
+    .search-items-block{
+        padding: 2rem 0;
+    }
+    .search-icon-section2{
+        font-size: 1rem;
+    }
+    .items-name{
+        width: 16rem;
+        gap: 1.5rem;
+    }
+
+    /* Reviews */
+
+    .reviews{
+        width: 19rem;
+    }
+    .reviews-tittle{
+        font-size: 1.5rem;
+    }
+    .review-block{
+        width: 17rem;
+    }
+    .review-name{
+        font-size: 1.2rem;
+        text-decoration: underline;
+    }
+    .review-text{
+        font-size: 1.1rem;
+    }
+    .review-stars{
+        font-size: 1.4rem;
     }
 }

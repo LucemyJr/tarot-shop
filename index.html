@@ -10,17 +10,27 @@
 </head>
 <body>
     <header class="header">
-        <div><a href="#" class="logo">Shop</a></div>
-        <div class="search-area"><input type="text" name="search" class="search" placeholder="search for anything....">
+        <a href="#" class="logo">Shop</a>
+        <div class="search-area"><input type="text" name="search" class="search" placeholder="search...">
             <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></a></i>
         </div>
-        <ul id="nav">
-            <li><a href="#" class="nav-option"><i class="fa-regular fa-heart"></i></a></li>
-            <li><a href="#" class="nav-option"><i class="fa-regular fa-bell"></i></a></li>
-            <li><a href="#" class="nav-option"><i class="fa-regular fa-user"></i></a></li>
-            <li><a href="#" class="nav-option"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        </ul>
-        <div><a href="#" class="need-help">NEED HELP?</a></div>
+        <nav id="nav">
+            <button id="btn-mobile">
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu">
+                <li class="menu-option"><a href="#" ><i class="fa-regular fa-heart"></i></a>
+                <span class="menu-option-span"> Favorites</span></li>
+                <li class="menu-option"><a href="#"><i class="fa-regular fa-bell"></i></a>
+                <span class="menu-option-span"> Announcements</span></li>
+                <li class="menu-option"><a href="#"><i class="fa-regular fa-user"></i></a>
+                <span class="menu-option-span"> Profile</span></li>
+                <li class="menu-option"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <span class="menu-option-span"> My Cart</span></li>
+
+                <div><a href="#" class="need-help">NEED HELP?</a></div>
+            </ul>
+        </nav>
     </header>
     <main class="main">
         <section class="section1">
@@ -187,7 +197,14 @@
             </div>
             <div class="column3">
                 <div class="column-items">
-                    <h1 class="sort">sort: relevance ▼</h1>
+                    <div class="sort-block">
+                        <select name="sort" id="sort">
+                            <option value="">Sort by: Featured</option>
+                            <option value="0">Relevance</option>
+                            <option value="1">Price: Low to High</option>
+                            <option value="2">Price: High to Low</option>
+                        </select> 
+                    </div>
                     <div class="column-images">
                         <div class="image-block">
                             <img src="assets/2.png" alt="image 2" class="image2">
@@ -217,4 +234,5 @@
     </main>
 </body>
 <script src="https://kit.fontawesome.com/a61adb45a7.js" crossorigin="anonymous"></script>
+<script src="src/script.js"></script>
 </html>
